@@ -12,14 +12,15 @@ public class Main {
         do {
             System.out.println("Digite 1: Cadastrar um Produto \n" + "Digite 2: Exibir Detalhes \n" + "Digite 3: Calcula o Valor Total do Estoque\n" + "Digite 4: Sair");
             int x = sc.nextInt();
+            sc.nextLine();
             switch (x) {
                 case 1:
                     System.out.println("Digite o nome do Produto: ");
-                    sc.nextLine();
+                    p.nome = sc.nextLine();
                     System.out.println("Digite o Preço do Produto: ");
-                    sc.nextDouble();
+                    p.preco = sc.nextDouble();
                     System.out.println("Digite a Quantidade do Produto em Estoque: ");
-                    sc.nextInt();
+                    p.qnt = sc.nextInt();
                     System.out.println("Produto Cadastrado com Sucesso!!");
                     break;
 

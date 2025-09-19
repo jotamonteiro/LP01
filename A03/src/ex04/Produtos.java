@@ -6,13 +6,13 @@ public class Produtos {
     int qnt;
 
     public void exibirDetalhes(){
-        System.out.printf("Nome: %s", nome);
-        System.out.printf("Preço: %f", preco);
-        System.out.printf("Quantidade: %d", qnt);
+        System.out.printf("Nome: %s\n", nome);
+        System.out.printf("Preço: %f\n", preco);
+        System.out.printf("Quantidade: %d\n", qnt);
     }
     public void calcularValorTotal(){
        double vt = preco * qnt;
-        System.out.printf("Valor Total: %f", vt);
+        System.out.printf("Valor Total: %.2f\n", vt);
     }
 
 }
