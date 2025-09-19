@@ -7,19 +7,29 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         Produto p = new Produto();
+        int x;
 
-        System.out.println("Cod. do Produto: ");
-        p.setCod(sc.next());
-        System.out.println("Nome do Produto: ");
-        p.setNome(sc.nextLine());
-        System.out.println("Cor do Produto: ");
-        p.setCor(sc.next());
-        System.out.println("Valor do Produto: ");
-        p.setValor(sc.nextDouble());
-        System.out.println("Quantidade do Produto: ");
-        p.setQtd(sc.nextInt());
-        System.out.println("Peso do Produto: ");
-        p.setPeso(sc.nextDouble());
+        do {
+            System.out.println("1 - Cadastrar Produto \n 2 - Vender Produto \n 3 - Ver Estoque \n 0 - Sair" );
+            x = sc.nextInt();
+
+            switch (x) {
+                case 1:
+                    p.cadProduto();
+                    break;
+
+                case 2:
+                    p.venProduto();
+                    break;
+
+                case 3:
+                    p.verEstoque();
+                    break;
+
+            }
+        } while (x != 0);
+
+
 
 
 
