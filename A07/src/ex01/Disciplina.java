@@ -6,9 +6,8 @@ public class Disciplina {
     private Professor p;
     private Aluno a;
 
-    public Disciplina(String nome, int ch) {
-        this.nome = nome;
-        this.ch = ch;
+    public Disciplina() {
+
     }
 
     public void associarProf(Professor p){
@@ -25,5 +24,15 @@ public class Disciplina {
 
     public void setCh(int ch) {
         this.ch = ch;
+    }
+
+    @Override
+    public String toString() {
+        return "Disciplina{" +
+                "nome='" + nome + '\'' +
+                ", ch=" + ch +
+                ", p=" + p +
+                ", a=" + a +
+                '}';
     }
 }

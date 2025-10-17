@@ -1,6 +1,6 @@
 package ex01;
 
-public class Pessoa {
+public abstract class Pessoa {
     protected String nome;
     protected int cpf;
     protected int idade;
@@ -15,5 +15,21 @@ public class Pessoa {
 
     public void setIdade(int idade) {
         this.idade = idade;
+    }
+
+    public abstract void quemSouEu();
+    public abstract void minhaResponsabilidade();
+
+
+
+
+
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "nome='" + nome + '\'' +
+                ", cpf=" + cpf +
+                ", idade=" + idade +
+                '}';
     }
 }

@@ -7,6 +7,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         Professor p = new Professor();
         Aluno a = new Aluno();
+        Disciplina d = new Disciplina();
 
         System.out.println("====== Cadastro de Aluno =======");
         System.out.println("Digite o Nome do Aluno: ");
@@ -21,7 +22,7 @@ public class Main {
         a.setMatricula(sc.nextLine());
 
 
-
+        System.out.println("======== Cadastro do Professor =========");
         System.out.println("Digite o Nome do Professor: ");
         p.setNome(sc.nextLine());
         System.out.println("Digite a Idade do Professor: ");
@@ -33,9 +34,30 @@ public class Main {
         p.setMatricula(sc.nextInt());
         sc.nextLine();
 
+        System.out.println("======= Cadastro da Disciplina =======");
+        System.out.println("Digite o Nome da Disciplina: ");
+        d.setNome(sc.nextLine());
+        System.out.println("Digite a CH da Discilplina: ");
+        d.setCh(sc.nextInt());
+        sc.nextLine();
+
+        p.setCargo(CARGO.Professor);
 
 
+        d.associarProf(p);
+        d.associarAluno(a);
 
+        System.out.println("=========");
+        p.minhaResponsabilidade();
+        p.quemSouEu();
+        System.out.println(CARGO.Professor);
+
+        System.out.println("=========");
+
+        a.quemSouEu();
+        a.minhaResponsabilidade();
+
+        System.out.println("=========");
 
         System.out.println(a);
         System.out.println(p);

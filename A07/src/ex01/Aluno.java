@@ -9,6 +9,16 @@ public class Aluno extends Pessoa{
     }
 
     @Override
+    public void quemSouEu() {
+        System.out.println("Eu Sou o Aluno");
+    }
+
+    @Override
+    public void minhaResponsabilidade() {
+        System.out.println("Tenho que Aprender");
+    }
+
+    @Override
     public String toString() {
         return "Aluno{" +
                 "matricula='" + matricula + '\'' +
