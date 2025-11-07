@@ -6,8 +6,10 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Professor p = new Professor();
-        Aluno a = new Aluno();
+        Pessoa a = new Aluno();
         Disciplina d = new Disciplina();
+        Coordenador c = new Coordenador();
+        CadastroProfessor cp = new CadastroProfessor();
 
         System.out.println("====== Cadastro de Aluno =======");
         System.out.println("Digite o Nome do Aluno: ");
@@ -19,7 +21,7 @@ public class Main {
         a.setIdade(sc.nextInt());
         sc.nextLine();
         System.out.println("Digite a Matricula do Aluno: ");
-        a.setMatricula(sc.nextLine());
+        ((Aluno) a).setMatricula(sc.nextLine());
 
 
         System.out.println("======== Cadastro do Professor =========");
@@ -41,11 +43,20 @@ public class Main {
         d.setCh(sc.nextInt());
         sc.nextLine();
 
-        p.setCargo(CARGO.Professor);
+        System.out.println("======== Cadastro do Coordenador =========");
+        System.out.println("Digite o Nome do Coordenador: ");
+        c.setNome(sc.nextLine());
+        System.out.println("Digite a Idade do Coordenador: ");
+        c.setIdade(sc.nextInt());
+        System.out.println("Digite o CPF do Coordenador: ");
+        c.setCpf(sc.nextInt());
+        sc.nextLine();
 
+        p.setCargo(CARGO.Professor);
+        c.setCargo(CARGO.Coordenador);
 
         d.associarProf(p);
-        d.associarAluno(a);
+        d.associarAluno((Aluno) a);
 
         System.out.println("=========");
         p.minhaResponsabilidade();
@@ -61,5 +72,10 @@ public class Main {
 
         System.out.println(a);
         System.out.println(p);
+        System.out.println(c);
+        System.out.println(d);
+
+        cp.cadastrar(p);
+        cp.listar();
     }
 }

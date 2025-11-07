@@ -17,6 +17,18 @@ public abstract class Pessoa {
         this.idade = idade;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public int getCpf() {
+        return cpf;
+    }
+
     public abstract void quemSouEu();
     public abstract void minhaResponsabilidade();
 

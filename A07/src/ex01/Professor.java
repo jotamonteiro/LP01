@@ -1,6 +1,6 @@
 package ex01;
 
-public class Professor extends Pessoa{
+public class Professor extends Pessoa implements Remunerado{
     public CARGO cargo;
     private int matricula;
     private String disciplina;
@@ -45,5 +45,15 @@ public class Professor extends Pessoa{
                 ", cpf=" + cpf +
                 ", idade=" + idade +
                 '}';
+    }
+
+    @Override
+    public void aplicarBonus() {
+
+    }
+
+    @Override
+    public void calcularSalario() {
+
     }
 }
